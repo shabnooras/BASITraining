@@ -7,6 +7,8 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using System.Linq;
+using BASITraining.Models;
 
 namespace BASITraining
 {
@@ -70,6 +72,12 @@ namespace BASITraining
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+        public IQueryable<category> GetCategories()
+        {
+            var _db = new BASITraining.Models.p_context();
+            IQueryable<category> query = _db.Categories;
+            return query;
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

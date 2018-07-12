@@ -7,6 +7,9 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 
+using System.Data.Entity;
+using BASITraining.Models;
+
 namespace BASITraining
 {
     public class Global : HttpApplication
@@ -16,6 +19,10 @@ namespace BASITraining
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //intialise product database
+            Database.SetInitializer(new DBInitialise());
+
         }
     }
 }
