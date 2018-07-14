@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using BASITraining.Models;
 
-namespace BASITraining
+namespace BASITraining.Logic
 {
     public class ShoppingCartActions : IDisposable
     {
@@ -19,24 +19,22 @@ namespace BASITraining
             // Retrieve the product from the database.           
             ShoppingCartId = GetCartId();
 
-            var cartItem = _db.ShoppingCartItems.SingleOrDefault(
-                c => c.CartId == ShoppingCartId
-                && c.ProductId == id);
+            var cartItem = _db.coursecartitems.SingleOrDefault(c => c.CartId == ShoppingCartId
+            && c.ProductID == id);
             if (cartItem == null)
             {
                 // Create a new cart item if no cart item exists.                 
-                cartItem = new CartItem
+                cartItem = new cartitem
                 {
                     ItemId = Guid.NewGuid().ToString(),
-                    ProductId = id,
+                    ProductID = id,
                     CartId = ShoppingCartId,
-                    Product = _db.Products.SingleOrDefault(
-                   p => p.ProductID == id),
+                    Product = _db.Products.SingleOrDefault(p => p.ProductID == id),
                     Quantity = 1,
                     DateCreated = DateTime.Now
                 };
 
-                _db.ShoppingCartItems.Add(cartItem);
+                _db.coursecartitems.Add(cartItem);
             }
             else
             {
@@ -74,11 +72,11 @@ namespace BASITraining
             return HttpContext.Current.Session[CartSessionKey].ToString();
         }
 
-        public List<CartItem> GetCartItems()
+        public List<cartitem> GetCartItems()
         {
             ShoppingCartId = GetCartId();
 
-            return _db.ShoppingCartItems.Where(
+            return _db.coursecartitems.Where(
                 c => c.CartId == ShoppingCartId).ToList();
         }
     }

@@ -71,7 +71,6 @@ namespace BASITraining
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
         public IQueryable<category> GetCategories()
         {
@@ -84,6 +83,12 @@ namespace BASITraining
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
+
+        protected void categoryList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+       
     }
 
 }

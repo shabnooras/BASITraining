@@ -27,18 +27,5 @@ namespace BASITraining
             }
             return query;
         }
-        protected void addToCard(object sender, EventArgs e)
-        {
-
-            Button btn = (Button)sender;
-
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            con.Open();
-
-            SqlCommand cmd = new SqlCommand("insert into AddToCartTable values ('" +Request.QueryString["ProductID"] + "')", con);
-
-            cmd.ExecuteNonQuery();
-          
-        }
     }
 }

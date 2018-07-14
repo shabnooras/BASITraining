@@ -198,7 +198,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Account\Addtocart.aspx" />
+    <Content Include="AddToCart.aspx" />
     <Content Include="App_Data\DB.mdf" />
     <Content Include="App_Data\DB_log.ldf">
       <DependentUpon>DB.mdf</DependentUpon>
@@ -226,7 +226,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="images\banners\1.jpg" />
+    <Content Include="images\banners\2.jpg" />
+    <Content Include="images\banners\3.jpg" />
+    <Content Include="images\banners\4.jpg" />
+    <Content Include="images\banners\5.jpg" />
     <Content Include="images\logo.png" />
+    <Content Include="product_details.aspx" />
     <Content Include="product_list.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -262,6 +268,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="shoppingcart.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
@@ -385,12 +392,12 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Addtocart.aspx.cs">
-      <DependentUpon>Addtocart.aspx</DependentUpon>
+    <Compile Include="AddToCart.aspx.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Addtocart.aspx.designer.cs">
-      <DependentUpon>Addtocart.aspx</DependentUpon>
+    <Compile Include="AddToCart.aspx.designer.cs">
+      <DependentUpon>AddToCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -420,11 +427,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\ShoppingCartActions.cs" />
+    <Compile Include="Models\cartitem.cs" />
     <Compile Include="Models\category.cs" />
     <Compile Include="Models\DBInitialise.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\product.cs" />
     <Compile Include="Models\p_context.cs" />
+    <Compile Include="product_details.aspx.cs">
+      <DependentUpon>product_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product_details.aspx.designer.cs">
+      <DependentUpon>product_details.aspx</DependentUpon>
+    </Compile>
     <Compile Include="product_list.aspx.cs">
       <DependentUpon>product_list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -433,6 +449,13 @@
       <DependentUpon>product_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="shoppingcart.aspx.cs">
+      <DependentUpon>shoppingcart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shoppingcart.aspx.designer.cs">
+      <DependentUpon>shoppingcart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

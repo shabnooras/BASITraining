@@ -2,6 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+
+
     <h1>ABOUT</h1>
     <p class ="lead">BAS IT training is one of leading training institute on the principle of enhancing education and unleashing the potential of every student. 
         We operate from Birmingham and Coventry to train students and produce job-ready professionals who get recruited by the best companies. 

@@ -40,21 +40,15 @@
                                         <b>Price: </b><%#:String.Format("{0:c}", Item.UnitPrice)%>
                                     </span>
                                   
-                                    <br />
-                                    <%-- <div class="form-group"> 
-                                        <div class="col-md-offset-2 col-md-10">--%>
-                                    <asp:Button runat="server" OnClick="addToCard" Text="Add to cart"  CssClass="btn btn-default" />
-                                    <br />    
-                                    
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="product_details.aspx?ProductID=<%#:Item.ProductID%>"> </a>
                                     <span>
                                         <b>Duration: </b><%#:Item.Duration%>
+                                        <br />
                                     </span>
-                                    <a href="Account/Addtocart.aspx?productID=<%#:Item.ProductID %>">
+                                    <a href="/AddTocart.aspx?productID=<%#:Item.ProductID %>">
                                         <span class="ProductListItem">
                                     <b>Add To Cart</b>
                                              </span>
