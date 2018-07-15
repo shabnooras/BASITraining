@@ -213,6 +213,7 @@
     <Content Include="Catalog\VS.jpg" />
     <Content Include="Catalog\windows10.jpeg" />
     <Content Include="Catalog\word.jpg" />
+    <Content Include="checkout\checkout.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -225,13 +226,16 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="checkout\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="images\banners\1.jpg" />
     <Content Include="images\banners\2.jpg" />
     <Content Include="images\banners\3.jpg" />
     <Content Include="images\banners\4.jpg" />
     <Content Include="images\banners\5.jpg" />
+    <Content Include="images\callph.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\visit.png" />
     <Content Include="product_details.aspx" />
     <Content Include="product_list.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
@@ -410,6 +414,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="checkout\checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkout\checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -417,6 +428,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomPasswordHasher.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -424,6 +436,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Encrypt.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

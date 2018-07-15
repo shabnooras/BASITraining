@@ -15,8 +15,8 @@ namespace BASITraining
         protected void Page_Load(object sender, EventArgs e)
         {
             string rawId = Request.QueryString["ProductID"];
-            int ProductID;
-            if (!String.IsNullOrEmpty(rawId) && int.TryParse(rawId, out ProductID))
+            int productId;
+            if (!String.IsNullOrEmpty(rawId) && int.TryParse(rawId, out productId))
             {
                 using (ShoppingCartActions usersshoppingcart = new ShoppingCartActions())
                 {

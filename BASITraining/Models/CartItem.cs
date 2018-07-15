@@ -18,7 +18,7 @@ namespace BASITraining.Models
 
         public System.DateTime DateCreated { get; set; }
 
-        public int ProductID { get; set; }
+        public int ProductId { get; set; }
 
         public virtual product Product { get; set; }
 

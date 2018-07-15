@@ -15,11 +15,5 @@ namespace BASITraining.Models
         public DbSet<category> Categories { get; set; }
         public DbSet<product> Products { get; set; }
         public DbSet<cartitem> coursecartitems { get; set; }
-
-
-
-
-
-
     }
 }
